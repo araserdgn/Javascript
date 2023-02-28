@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            overflow: hidden;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #f3f5f8;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            z-index: 111;
+            height: 80px;
+            line-height: 50px;
+        }
+        .logo {
+            display: flex;
+            font-size: 40px;
+            font-weight: 800;
+            color: #3d535f;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        b {
+            font-size: 70px;
+            color: #7f00ff;
+        }
+        .navItems {
+            display: flex;
+        }
+        .navItems li {
+            list-style: none;
+            margin: 0 15px;
+        }
+        .navItems li a {
+            font-size: 25px;
+            color: #3d535f;
+            letter-spacing: 3px;
+            text-decoration: none;
+            transition: 0.7s;
+        }
+        .navItems li:hover a,
+        .links a:hover {
+            color: #7f00ff;
+        }
+
+        .links a {
+            font-size: 30px;
+            color: #3d535f;
+            margin: 15px 10px;
+        }
+        .wrapper {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 10%;
+        }
+        .wrapper::before {
+            position: absolute;
+            content: '';
+            height: 600px;
+            width: 600px;
+            border-radius: 50%;
+            left: -12%;
+            top: 40%;
+            background: linear-gradient(45deg,#7f00ff,pink);
+            animation: obje 6s linear infinite;
+        }
+        .wrapper::after {
+            position: absolute;
+            content: '';
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
+            left: 35%;
+            top: 12%;
+            background: linear-gradient(45deg,#7f00ff,pink);
+            animation: obje 6s linear infinite;
+        }
+        @keyframes obje {
+            50% {
+                left: -13%;
+                top: 41%;
+            }
+        }
+        .cols0 {
+            z-index: 5;
+        }
+        .cols {
+            width: 50%;
+        }
+        .toplin {
+            display: block;
+            position: relative;
+            font-size: 35px;
+            letter-spacing: 5px;
+            color: #3d535f;
+        }
+        .toplin::after {
+            position: absolute;
+            content: '';
+            height: 4px;
+            width: 45px;
+            bottom: 10px;
+            background-color: #7f00ff;
+        }
+        h1 {
+            display: block;
+            font-size: 7em;
+            color: #3d535f;
+            font-weight: 900;
+        }
+        .multiText {
+            color: #7f00ff;
+            text-transform: capitalize;
+        }
+        p {
+            display: block;
+            width: 90%;
+            font-size: 1.2em;
+            color: #3d535f;
+        }
+        .butons {
+            width: 100%;
+            position: relative;
+            left: 150px;
+        }
+        button {
+            outline: auto;
+            border: none;
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: 400;
+            color: #fff;
+            background-color: #3d535f;
+            padding: 8px 14px;
+            margin: 40px 5px;
+            letter-spacing: 2px;
+            box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+        }
+        button:hover {
+            background-color: #7f00ff;
+        }
+        .imgBox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .imgBox img {
+            position: relative;
+            height:50%;
+            width: 100%;
+            top: 130px;
+            right: 10px;
+            transform: rotateY(180deg);
+            animation: anime 4s linear infinite;
+        }
+        @keyframes anime {
+            50% {
+                right: 15px;
+                top: 110px;
+            }
+        }
+        .imgBox #splash {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(-35deg);
+            filter: saturate(200%);
+            animation: anim 4s linear infinite;
+        }
+        @keyframes anim {
+            50% {
+                top: 48%;
+                left: 52%;
+                width: 115%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Folio <b>.</b></div>
+            <ul class="navItems">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Skils</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+
+            <div class="links">
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+            </div>
+        </nav>
+
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="toplin">Hello</span>
+                <h1>I'm <span class="multiText">Coder</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit doloremque quibusdam repudiandae vitae cupiditate aliquam, voluptas minus sunt ipsa modi officiis cum dolore </p>
+                <div class="butons">
+                    <button>Download CV</button>
+                    <button>Hire Me</button>
+                </div>
+            </div>
+            <div class="cols cols1">
+                <div class="imgBox">
+                    <img src="img2.jpg" id="splash">
+                    <img src="img1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YAZI EFEKTİ İÇİN LAZIM -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="app.js"></script>
+</body>
+</html>
